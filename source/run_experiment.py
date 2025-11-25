@@ -97,12 +97,10 @@ def run_experiment(
             results)
         figy2.savefig(file_name2)
         csv_file_name = file_name_basis + filename + '.csv'
-        csv_file_name2 = '/Users/eivinkas/Library/CloudStorage/OneDrive-NTNU/2025/() Calibration/Data/' + filename + '.csv'
         json_results = json.dumps(all_results)
         json_string = json_results
         df = pd.read_json(StringIO(json_string))
         df.to_csv(csv_file_name)
-        df.to_csv(csv_file_name2)
 
     # Number Comparison
     if exp_type == 'number_comparison':
